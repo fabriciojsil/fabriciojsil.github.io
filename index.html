@@ -4,16 +4,17 @@
     <title>Fabrício Jean</title>
     <script type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="section white lighten-1">
-        <div class="row">
-            <div class="col s12 l4 m4 center-on-small-only"  >
+        <div class="row container">
+            <div class="col s12 l12 m12 center"  >
                 <div class="image-container " >
-                    <img src="images/me.jpg" style="border-radius: 15px 50px">
+                    <img src="images/me.jpg" class="boder-me">
                 </div>
             </div>
-            <div class="col s12 l8 m8">
+            <div class="col s12 l12 m12 center">
                 <h4>Who am I?</h4>
                 <p> My name is Fabrício Jean Silva, 
                     I am graduated in Analysis and Software Development, interested in new technologies and
@@ -31,10 +32,75 @@
     </div>
 
     <div class="section white lighten-1">
+        <h2 class="header center">Experiences</h2>
         <div class="row container">
-            <h2 class="header">Experiences</h2>
-            <p class="white-text">My Experiences.</p>
+            <div class="col s12 l12 m12 center" >
+                <div class="image-container " >
+                    <img height="170px" src="images/digitro.png" class="boder-me">
+                </div>
+                <h5>Dígitro Tecnologia</h5>
+            </div>
+            <div class="col s12 l12 m12">
+                <p> Dígitro Tecnologia is a big Brazilian company which works in many sectors such as public
+                    security and call centers management. </p>
+                <h6> Full Stack Developer - October 2015 / Nowadays </h5>
+                <p>I work mainly with NodeJS, Web Components, and Java 7.
+                    We use NodeJS to crawl as much information as possible from users across some
+                    social networks such as Facebook, Linkedin, and Instagram. This information is used
+                    to follow/track user's fingerprints and understand potentially dangerous behavior or
+                    even discover what some user is doing on the internet based on friends/relations,
+                    pages liked, posts and so on. </p>
+                    <p> When I entered the company I drove the team to refactor many modules, write unit
+                    tests and taught them how to properly debug NodeJS applications.
+                    I also suggested and implemented a KPI controller to understand better our metrics.
+                    </p>
+                    <p> 
+                    Among the technologies used are:
+                    Grunt.js and Gulp.js as task runners,
+                    Mocha and chai.js as a test framework and assertions library,
+                    Mokito to write java unit tests.</p>
+            </div>
         </div>
+        <div class="row container">
+            <div class="col s12 l12 m12 center" >
+                <div class="image-container " >
+                    <img src="images/vh.png" class="boder-me">
+                </div>
+                <h5>Vh Soluções</h5>
+            </div>
+            <div class="col s12 l12 m12">
+                <p> VH Soluções is a company with a focus to attend the necessities on daily basis of politicians,
+                    government officials and inhabitants. </p>
+                <h6> Java Developer - May 2015 / October 2015 </h5>
+                <p>I worked ​ as a Java developer in a project called ​ Participa+ , which was designed to
+                    improve the communication between politicians and the population. The software we
+                    developed there also helped to execute a lot of common tasks from politicians and its
+                    assessors. </p>
+                <p>
+                    We used Java 7 as the main programming language, JSF, PrimeFaces and the
+                    Postgres as the RDBMS.</p>
+            </div>
+        </div>
+        <div class="row container">
+            <div class="col s12 l12 m12 center" >
+                <div class="image-container " >
+                    <img src="images/chaordic.png" height="170px" class="boder-me">
+                </div>
+                <h5>Chaordic</h5>
+            </div>
+            <div class="col s12 l12 m12">
+                <p> Chaordic Systems ​ develops solutions to improve e-commerce experience using dynamic
+                    recommendation systems. The goal was to help people find what they want to discover new
+                    products based on our recommendations </p>
+                <h6> Full Stack Developer - May 2014 / March 2015 </h5>
+                <p>I worked developing widgets, where the suggestions are shown, using CSS, HTML5,
+                    and JavaScript. I was also responsible for creating Python scripts to validate, correct,
+                    clean and import large data dumps from many sources to our databases.</p>
+
+            </div>
+        </div>
+    
+
     </div>
     
     <div class="parallax-container">
@@ -76,17 +142,9 @@
           </div>
     </footer>
 
-
-
     <script  src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    
-    <script type="text/javascript">
-            $(document).ready(function(){
-              $('.parallax').parallax();
-            });
-    </script>
+    <script src="js/index.js" ></script>
 
 </body>
 </html>
