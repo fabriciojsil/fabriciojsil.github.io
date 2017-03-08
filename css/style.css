@@ -2,21 +2,7 @@
     border-radius: 15px 50px;
 }
 
-
-a {color:#FFF;}      /* unvisited link */
-a:visited {color:#FFF;}  /* visited link */
-a:hover {color:#FFF;}  /* mouse over link */
-a:active {color:#FFF;} 
-
-/*@media only screen and (max-width: 768px){
-    body{
-        font-size: 2.5rem;
-    }
-}
-*/
-/*
-@media (min-width: 768px) {
-    body{
-        font-size: 1rem;
-    } 
-}*/
+a {color:#FFF;}
+a:visited {color:#FFF;}
+a:hover {color:#FFF;}
+a:active {color:#FFF;}

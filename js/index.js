@@ -1,6 +1,8 @@
 $(document).ready(function(){
-    $('.parallax').parallax();
-    
+    $('.parallax').parallax({
+      height: "20px"
+    });
+
     $(".button-collapse").sideNav({
         menuWidth: 300, // Default is 300
         edge: 'left', // Choose the horizontal origin
