@@ -17,7 +17,4 @@ $(document).ready(function(){
             scrollTop: $(section).offset().top
         });
     });
-    document.querySelector("#who-am-i img").src = imagesObject.me;
-    document.querySelector("#node-parallax").src = imagesObject.node_parallax;
-    document.querySelector("#js-parallax").src = imagesObject.js_parallax;
 });
