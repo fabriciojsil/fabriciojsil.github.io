@@ -4,10 +4,10 @@ $(document).ready(function(){
     });
 
     $(".button-collapse").sideNav({
-        menuWidth: 300, // Default is 300
-        edge: 'left', // Choose the horizontal origin
-        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        draggable: true // Choose whether you can drag to open on touch screens
+        menuWidth: 300,
+        edge: 'left',
+        closeOnClick: true,
+        draggable: true
     });
 
     $("nav").find("a").click(function(e) {
@@ -17,6 +17,7 @@ $(document).ready(function(){
             scrollTop: $(section).offset().top
         });
     });
-
-
+    document.querySelector("#who-am-i img").src = imagesObject.me;
+    document.querySelector("#node-parallax").src = imagesObject.node_parallax;
+    document.querySelector("#js-parallax").src = imagesObject.js_parallax;
 });
