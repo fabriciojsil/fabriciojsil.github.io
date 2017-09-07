@@ -53,6 +53,7 @@ html {
 }
 
 .container {
+	padding-top: 50px;
 	display: flex;
 	flex-direction: column;
 }
@@ -150,7 +151,7 @@ html {
 @media screen and (max-width: 986px) {
 	
 	.description-text {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
 	.visual {
@@ -166,7 +167,7 @@ html {
 	}
 
 	.social-img {
-		width: 96px;
+		width: 48px;
 	}
 }
 

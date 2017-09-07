@@ -10,7 +10,7 @@
 
     function startGa() {
         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('create', 'UA-104905890-1', 'auto');
         ga('send', 'pageview');
     }
 
