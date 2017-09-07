@@ -1,8 +1,172 @@
-.boder-me {
-    border-radius: 15px 25px;
+/* css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: #97caef;
+}
+ol, ul {
+	list-style: none;
 }
 
-a {color:#FFF;}
-a:visited {color:#FFF;}
-a:hover {color:#FFF;}
-a:active {color:#FFF;}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/*styles*/
+html {
+	font-size: 16px;
+	font-family: 'Josefin Slab', serif;
+	color: #250ae4;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.visual {
+	display: flex;
+	height: 40vh;
+	align-items: center;
+	justify-content: center;
+    padding: 10px 50px;
+}
+
+.personal-image {
+	border-radius: 50%;
+	max-width: 150px;
+}
+
+.description, .social {
+	padding: 30px 50px;
+}
+
+.description {
+	flex-direction: column;
+}
+
+.description-text {
+	font-size: 1.5rem;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.social {
+	padding: 30px 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+
+.social-img {
+	width: 50px;
+	padding: 0 5px;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+
+@media screen and (max-width: 986px) {
+	
+	.description-text {
+		font-size: 3rem;
+	}
+
+	.visual {
+		height: 35vh;
+	}
+
+	.personal-image {
+		max-width: 200px;
+	}
+
+	.description {
+		padding-bottom: 100px;
+	}
+
+	.social-img {
+		width: 96px;
+	}
+}
+

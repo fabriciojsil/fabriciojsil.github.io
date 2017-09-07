@@ -1,20 +1,23 @@
-$(document).ready(function(){
-    $('.parallax').parallax({
-      height: "20px"
-    });
-
-    $(".button-collapse").sideNav({
-        menuWidth: 300,
-        edge: 'left',
-        closeOnClick: true,
-        draggable: true
-    });
-
-    $("nav").find("a").click(function(e) {
-        e.preventDefault();
-        var section = $(this).attr("href");
-        $("html, body").animate({
-            scrollTop: $(section).offset().top
+(function loader() {
+    function startSkypeButton(){
+        Skype.ui({
+            "name": "chat",
+            "element": "skype-button",
+            "participants": ["fabriciojs"],
+            "imageSize" : 32
         });
-    });
-});
+    }
+
+    function startGa() {
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview');
+    }
+
+    document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+            startGa();
+            startSkypeButton();    
+        }
+    }
+}());
