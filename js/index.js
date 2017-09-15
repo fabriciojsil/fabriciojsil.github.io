@@ -14,10 +14,23 @@
         ga('send', 'pageview');
     }
 
+    function startOneSignal() {
+        let OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+          appId: "0c4ce91c-400f-45fb-8ded-16d84211ea0d",
+          autoRegister: false,
+          notifyButton: {
+            enable: true
+          }
+        }]);
+    }
+
+
     document.onreadystatechange = function () {
         if (document.readyState == "complete") {
             startGa();
-            startSkypeButton();    
+            startSkypeButton(); 
+            startOneSignal()   
         }
     }
 }());
