@@ -1,7 +1,0 @@
-{
-  "name": "fabriciojs",
-  "short_name": "fabriciojs",
-  "start_url": "/",
-  "display": "standalone",
-  "gcm_sender_id": "482941778795"
-}
