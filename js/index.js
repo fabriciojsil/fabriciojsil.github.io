@@ -17,7 +17,7 @@
     document.onreadystatechange = function () {
         if (document.readyState == "complete") {
             startGa();
-            startSkypeButton();    
+            startSkypeButton();
         }
     }
 }());
