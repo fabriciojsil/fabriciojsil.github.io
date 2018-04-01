@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { render } from 'react-dom';
 
+import SocialCard from './components/SocialCard';
+
+import linkedinImg from './img/linkedin-icon.png';
+
 const App = () => (
-  <div>
-    Hi there!
-  </div>
+  <Fragment>
+    <SocialCard alt="alt" url="https://www.linkedin.com/in/fabriciojean" image={linkedinImg} />
+  </Fragment>
 );
 
 render(<App />, document.getElementById('app'));
