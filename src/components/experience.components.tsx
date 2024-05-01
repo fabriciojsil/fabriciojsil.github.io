@@ -23,7 +23,7 @@ export const ExperienceTitle = ({
     <div
       className={cn(
         [
-          "sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-700/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12",
+          "sticky top-0 z-20 -mx-6 mb-4  bg-slate-700/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12",
         ],
         className
       )}
