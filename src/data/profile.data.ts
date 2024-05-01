@@ -78,7 +78,7 @@ export const data: ProfileType = {
         location: "Berlin - Germany",
         companyUrl: "https://fitanalytics.com/",
         bulletPoints: [
-          "I worked in the FitAnalytics core team, where we give leading brands and retailers all the tools they need to solve sizing.",
+          "I worked in the Snap.INC (FitAnalytics) core team, where we give leading brands and retailers all the tools they need to solve sizing.",
           "Implemented and maintained Golang/NodeJS micro-services able to handle huge loads.",
           "Actively contributed to design our systems architecture.",
           "Contributed to build and maintain our cloud-based services as part of the team.",
