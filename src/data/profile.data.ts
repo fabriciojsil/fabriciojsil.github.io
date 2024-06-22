@@ -49,7 +49,7 @@ export const data: ProfileType = {
           "I work in the Getir's procurement team where I help the company to provide unprecedented solutions to delivering goods in urban areas.",
           "Implement and maintain around 22 NodeJS/Typescript microservices.",
           "Actively contribute to enhancing our team's workflow by engaging in discussions, refining processes, and improving quality standards.",
-          "Continuously monitor and enhance the performance of our tribe services to achieve a monthly cost reduction of $100,000.",
+          "Continuously monitor and enhance the performance of our tribe services to achieve a monthly cost reduction",
           "I assist in create and analyze our service metrics, empowering our PMs and managers to make smarter decisions.",
           "I am involved in various company initiatives with distinct objectives, such as implementing Data Mesh and analyzing Mongo Atlas costs.",
           "Provide mentorship to my colleague to reach their learning goals.",
