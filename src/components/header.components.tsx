@@ -1,6 +1,6 @@
 import { cn } from "@/lib/lib";
 import { ClassNameProps } from "@/types/props.types";
-import { GithubIcon, Linkedin, Twitter } from "lucide-react";
+import { GithubIcon, Linkedin, Twitter } from "./icons";
 
 export const Presentation = ({ children }: React.PropsWithChildren) => {
   return <header className="w-full max-w-[800px] pt-4 pb-2">{children}</header>;
