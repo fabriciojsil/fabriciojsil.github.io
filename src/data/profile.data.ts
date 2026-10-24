@@ -12,6 +12,23 @@ export type ProfileType = {
     title: string;
     items: ExperienceItemType[];
   };
+  certifications?: {
+    title: string;
+    items: CertificationItemType[];
+  };
+};
+
+export type CertificationItemType = {
+  title: string;
+  issuer: string;
+  issueDate: string;
+  expirationDate?: string;
+  credentialId?: string;
+  certificationNumber?: string;
+  credentialUrl?: string;
+  badgeUrl?: string;
+  skills?: string[];
+  status?: "certified" | "in_progress";
 };
 
 export type ExperienceItemType = {
@@ -147,6 +164,26 @@ export const data: ProfileType = {
           "HTML",
           "CSS3",
         ],
+      },
+    ],
+  },
+  certifications: {
+    title: "Certifications",
+    items: [
+      {
+        title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
+        issuer: "Microsoft",
+        issueDate: "October 19, 2026",
+        credentialId: "A14FD38B57512B4D",
+        certificationNumber: "49DB7E-93C6T0",
+        credentialUrl:
+          "https://learn.microsoft.com/en-us/users/fabriciojsil/credentials/a14fd38b57512b4d",
+        skills: [
+          "Cloud Concepts",
+          "Azure Architecture and Services",
+          "Azure Management and Governance",
+        ],
+        status: "certified",
       },
     ],
   },

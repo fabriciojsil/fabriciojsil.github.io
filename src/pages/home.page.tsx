@@ -14,6 +14,12 @@ import {
   ExperienceList,
   ExperienceTitle,
 } from "@/components/experience.components";
+import {
+  Certification,
+  CertificationItem,
+  CertificationList,
+  CertificationTitle,
+} from "@/components/certification.components";
 
 export const HomePage = ({ profile }: { profile: ProfileType }) => (
   <div className="flex flex-col bg-slate-700 text-slate-300 items-center ">
@@ -36,6 +42,16 @@ export const HomePage = ({ profile }: { profile: ProfileType }) => (
           ))}
         </ExperienceList>
       </Experience>
+      {profile.certifications && (
+        <Certification>
+          <CertificationTitle title={profile.certifications.title} />
+          <CertificationList>
+            {profile.certifications.items.map((c) => (
+              <CertificationItem key={c.title} item={c} />
+            ))}
+          </CertificationList>
+        </Certification>
+      )}
     </main>
   </div>
 );
