@@ -1,47 +1,9 @@
-export type ProfileType = {
-  personal: {
-    name: string;
-    position: string;
-    quote: string;
-  };
-  about: {
-    title: string;
-    description: string;
-  };
-  experience: {
-    title: string;
-    items: ExperienceItemType[];
-  };
-  certifications?: {
-    title: string;
-    items: CertificationItemType[];
-  };
-};
+import { Profile } from "@/core/domain/profile.entity";
 
-export type CertificationItemType = {
-  title: string;
-  issuer: string;
-  issueDate: string;
-  expirationDate?: string;
-  credentialId?: string;
-  certificationNumber?: string;
-  credentialUrl?: string;
-  badgeUrl?: string;
-  skills?: string[];
-  status?: "certified" | "in_progress";
-};
-
-export type ExperienceItemType = {
-  period: string;
-  position: string;
-  company: string;
-  location: string;
-  companyUrl?: string;
-  bulletPoints: string[];
-  techStack: string[];
-};
-
-export const data: ProfileType = {
+/**
+ * Static in-repository dataset for the developer profile.
+ */
+export const STATIC_PROFILE_DATA: Profile = {
   personal: {
     name: "Fabrício Jean Silva",
     position: "Senior Software Engineer",
@@ -115,22 +77,22 @@ export const data: ProfileType = {
       },
       {
         period: "Aug. 2018 - Mar. 2020",
-        position: "Software Engineer",
-        company: "Höffner GmbH",
-        location: "Berlin - Germany",
-        companyUrl: "https://hoeffener.de/",
+        position: "FullStack Developer",
+        company: "Runtastic a Adidas Company",
+        location: "Linz - Austria",
+        companyUrl: "https://runtastic.com",
         bulletPoints: [
-          "I worked in the Höffner Developer team that implemented and maintained five different E‑commerce.",
-          "Contributed to design and implement a new CMS service using Node.js/Typescript.",
-          "Actively contributed to implement new features and enhancing code quality through Test-Driven Development (TDD) and adherence to clean code principles within my team.",
-          "Assisted to migrate our self-hosted infrastructure to AWS EKS.",
+          "I worked in the Runtastic (Adidas) user engagement team, focusing on enhancing user retention and motivation to achieve their fitness goals through our applications.",
+          "I contributed to the development and maintenance of our modern microservices architecture, serving over 10 million active users.",
+          "Collaborated closely with cross-functional teams, including product managers, designers, and fellow engineers, to translate requirements into scalable and reliable software solutions.",
+          "Implemented automated CI/CD pipelines, increasing deployment frequency and reducing lead time for changes, leading to faster feature delivery to end-users.",
+          "Mentored junior engineers and conducted knowledge-sharing sessions on modern web development practices and emerging technologies.",
+          "Successfully resolved complex technical issues and performance bottlenecks, optimizing system reliability and user experience.",
         ],
         techStack: [
           "NodeJS",
           "TypeScript",
-          "MongoDB",
           "AWS",
-          "Kubernetes",
           "Docker",
           "ReactJS",
           "HTML",
@@ -187,4 +149,24 @@ export const data: ProfileType = {
       },
     ],
   },
+  social: [
+    {
+      name: "GitHub",
+      url: "https://github.com/fabriciojsil",
+      icon: "github",
+      ariaLabel: "Fabricio's GitHub profile (opens in a new tab)",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/fabriciojean/",
+      icon: "linkedin",
+      ariaLabel: "Fabricio's LinkedIn profile (opens in a new tab)",
+    },
+    {
+      name: "X",
+      url: "https://twitter.com/fabriciojsil",
+      icon: "twitter",
+      ariaLabel: "Fabricio's X (Twitter) profile (opens in a new tab)",
+    },
+  ],
 };

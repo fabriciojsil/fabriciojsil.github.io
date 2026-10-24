@@ -1,10 +1,13 @@
 import React from "react";
 
-interface IconProps extends React.SVGProps<SVGSVGElement> {
-  size?: number | string;
+export interface IconProps extends React.SVGProps<SVGSVGElement> {
+  readonly size?: number | string;
 }
 
-export const Github = ({ size = 24, className = "", ...props }: IconProps) => (
+/**
+ * GitHub SVG brand icon.
+ */
+export const GithubIcon = ({ size = 24, className = "", ...props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -23,9 +26,10 @@ export const Github = ({ size = 24, className = "", ...props }: IconProps) => (
   </svg>
 );
 
-export const GithubIcon = Github;
-
-export const Linkedin = ({ size = 24, className = "", ...props }: IconProps) => (
+/**
+ * LinkedIn SVG brand icon.
+ */
+export const LinkedinIcon = ({ size = 24, className = "", ...props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -45,7 +49,10 @@ export const Linkedin = ({ size = 24, className = "", ...props }: IconProps) => 
   </svg>
 );
 
-export const Twitter = ({ size = 24, className = "", ...props }: IconProps) => (
+/**
+ * X (formerly Twitter) SVG brand icon.
+ */
+export const TwitterIcon = ({ size = 24, className = "", ...props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -60,5 +67,27 @@ export const Twitter = ({ size = 24, className = "", ...props }: IconProps) => (
     {...props}
   >
     <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+  </svg>
+);
+
+/**
+ * External arrow link SVG icon.
+ */
+export const ExternalLinkIcon = ({ size = 14, className = "", ...props }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    width={size}
+    height={size}
+    className={className}
+    aria-hidden="true"
+    {...props}
+  >
+    <path
+      fillRule="evenodd"
+      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+      clipRule="evenodd"
+    />
   </svg>
 );

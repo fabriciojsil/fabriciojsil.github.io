@@ -1,40 +1,30 @@
-import { ExperienceItemType } from "@/data/profile.data";
+import { Section } from "@/presentation/components/common/Section";
+import { SectionTitle } from "@/presentation/components/common/SectionTitle";
+import { Badge } from "@/presentation/components/common/Badge";
+import { ExperienceItem as DomainExperienceItem } from "@/core/domain/experience.entity";
 import { cn } from "@/lib/lib";
 import { ClassNameProps } from "@/types/props.types";
 import { PropsWithChildren } from "react";
 
+/**
+ * Work experience section container.
+ */
 export const Experience = ({ children }: PropsWithChildren) => {
   return (
-    <section
-      id="experience"
-      className="mb-16 scroll-mt-16 md:mb-24 "
-      aria-label="Work experience"
-    >
+    <Section id="experience" ariaLabel="Work experience">
       {children}
-    </section>
+    </Section>
   );
 };
 
-export const ExperienceTitle = ({
-  title,
-  className,
-}: { title: string } & ClassNameProps) => {
-  return (
-    <div
-      className={cn(
-        [
-          "sticky top-0 z-20 -mx-6 mb-4  bg-slate-700/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12",
-        ],
-        className
-      )}
-    >
-      <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 ">
-        {title}
-      </h2>
-    </div>
-  );
-};
+/**
+ * Work experience section title.
+ */
+export const ExperienceTitle = SectionTitle;
 
+/**
+ * Ordered list container for experience items.
+ */
 export const ExperienceList = ({
   className,
   children,
@@ -42,10 +32,13 @@ export const ExperienceList = ({
   return <ol className={cn(["group/list"], className)}>{children}</ol>;
 };
 
+/**
+ * Individual work experience item card.
+ */
 export const ExperienceItem = ({
   className,
   item,
-}: { item: ExperienceItemType } & ClassNameProps & PropsWithChildren) => {
+}: { readonly item: DomainExperienceItem } & ClassNameProps) => {
   return (
     <li className={cn(["mb-12"], className)}>
       <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
@@ -56,7 +49,7 @@ export const ExperienceItem = ({
           {item.period}
         </header>
         <div className="z-10 sm:col-span-6">
-          <h3 className=" flex justify-between font-medium leading-snug text-slate-200">
+          <h3 className="flex justify-between font-medium leading-snug text-slate-200">
             <div className="mb-2">
               <span>{item.position},</span>
               <a
@@ -69,31 +62,25 @@ export const ExperienceItem = ({
                 <span className="pl-2">{item.company}</span>
               </a>
             </div>
-            <div className=" text-xs"> {item.location} </div>
+            <div className="text-xs">{item.location}</div>
           </h3>
           <ul>
-            {item.bulletPoints.map((value, index) => {
-              return (
-                <li
-                  key={index}
-                  className="mt-1 text-sm leading-normal list-disc marker:text-[#FFF]"
-                >
-                  {value}
-                </li>
-              );
-            })}
+            {item.bulletPoints.map((point, index) => (
+              <li
+                key={index}
+                className="mt-1 text-sm leading-normal list-disc marker:text-[#FFF]"
+              >
+                {point}
+              </li>
+            ))}
           </ul>
 
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-            {item.techStack.map((value, index) => {
-              return (
-                <li key={index} className="mr-1.5 mt-2">
-                  <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                    {value}
-                  </div>
-                </li>
-              );
-            })}
+            {item.techStack.map((tech, index) => (
+              <li key={index} className="mr-1.5 mt-2">
+                <Badge>{tech}</Badge>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
